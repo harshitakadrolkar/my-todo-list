@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="dashboard">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="greeting">
+                <p>HELLO,</p>
+                <h2>Harshita!</h2>
+                <span class="sparkle">✳</span>
+            </div>
+
+            <div class="quote-card">
+                <p>SMALL STEPS</p>
+                <p>EVERYDAY</p>
+                <p>LEAD TO BIG</p>
+                <p>RESULTS.</p>
+                <span class="heart">♡</span>
+            </div>
+
+            <div class="leaf-decoration">❧</div>
+
+            <div class="sidebar-bottom">
+                <span>✦</span>
+                Make today count.
+            </div>
+        </aside>
+
+        <!-- Main content -->
+        <main class="main-content">
+
+            <!-- Top bar -->
+            <div class="topbar">
+                <form id="todo-form" class="input-row">
+                    <input
+                        type="text"
+                        id="todo-input"
+                        placeholder="What's on your to-do list today?"
+                        autocomplete="off"
+                    >
+                    <button type="submit" id="add-btn">
+                        <span>＋</span> Add Task
+                    </button>
+                </form>
+
+                <div class="profile-icon" title="Your profile">
+                    ♙
+                </div>
+            </div>
+
+            <!-- Todo panel -->
+            <section class="todo-panel">
+
+                <div class="heading-row">
+                    <div>
+                        <h1>My To-Do List <span class="title-star">✳</span></h1>
+                        <p class="subtitle">
+                            GET THINGS DONE, ONE STEP AT A TIME.
+                        </p>
+                    </div>
+
+                    <div class="progress-card">
+                        <p id="progress-text">0 / 0 completed</p>
+                        <div class="progress-track">
+                            <div id="progress-fill"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Filters -->
+                <div class="filter-row">
+                    <button class="filter-btn active" data-filter="all">
+                        All
+                    </button>
+                    <button class="filter-btn" data-filter="pending">
+                        Pending
+                    </button>
+                    <button class="filter-btn" data-filter="completed">
+                        Completed
+                    </button>
+                </div>
+
+                <!-- Task list -->
+                <ul id="todo-list"></ul>
+
+                <p id="empty-message" class="empty-message">
+                    No tasks here yet. Add something to get started! ☆
+                </p>
+
+                <footer>
+                    One thing at a time. ♡
+                </footer>
+
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
